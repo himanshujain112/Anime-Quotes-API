@@ -11,7 +11,7 @@
 		<style>
 			body {
 				background-color: rgba(0, 0, 0, 0);
-				background-image: url("wp5722933-cover-anime-wallpapers.jpg");
+				background-image: url("{{ url_for('static', filename='images/background.jpg') }}");
 				background-repeat: no-repeat;
 				background-size: stretch;
 			}
@@ -52,12 +52,15 @@
 				object-fit: contain;
 			}
 		</style>
-		<script src="script.js"></script>
+		<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 	</head>
 	<body>
 		<h1>Anime Quotes Page</h1>
 		<div class="card">
-			<img src="image.avif" alt="Anime Image" />
+			<img
+				src="{{ url_for('static', filename='images/image.avif') }}"
+				alt="Anime Image"
+			/>
 			<h2 id="animeTitle">Title</h2>
 			<p id="animeQuote">Quote</p>
 			<p id="animeCharacter">~ character</p>

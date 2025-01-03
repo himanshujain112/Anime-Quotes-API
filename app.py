@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import csv
 import random
@@ -94,5 +94,10 @@ def generateBySearch():
 
     return jsonify(quote)
 
+
+@app.route("/example", methods=['GET'])
+def example():
+    return render_template("example/example.html")
+
 if __name__ == "__main__":
-    app.run(debug=False, port=os.environ.get("PORT", 5000))
+    app.run(debug=True, port=os.environ.get("PORT", 5000))

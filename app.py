@@ -28,7 +28,7 @@ def index():
 
 def generateRandom():
     try:
-        with open('data/animeQuotes.csv', mode='r', encoding="UTF-8") as file:
+        with open('data/AnimeQuotes.csv', mode='r', encoding="UTF-8") as file:
             reader = list(csv.DictReader(file))
         if reader:
             return random.choice(reader)

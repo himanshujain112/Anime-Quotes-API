@@ -1,6 +1,6 @@
 async function fetchAPI() {
 	let response = await fetch(
-		"https://anime-quotes-api-seven.vercel.app/random"
+		"https://anime-quotes-api-git-new-datas-c58bea-himanshujain112s-projects.vercel.app/random"
 	);
 	let text = await response.json();
 	document.getElementById("animeTitle").innerHTML = text["anime"];

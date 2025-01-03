@@ -3,10 +3,10 @@ async function fetchAPI() {
 		"https://anime-quotes-api-git-new-datas-c58bea-himanshujain112s-projects.vercel.app/random"
 	);
 	let text = await response.json();
-	document.getElementById("animeTitle").innerHTML = text["anime"];
+	document.getElementById("animeTitle").innerHTML = text["Anime"];
 	document.getElementById("animeCharacter").innerHTML =
-		"~ " + text["character"];
-	document.getElementById("animeQuote").innerHTML = text["quote"];
+		"~ " + text["Character"];
+	document.getElementById("animeQuote").innerHTML = text["Quote"];
 }
 
 fetchAPI();
